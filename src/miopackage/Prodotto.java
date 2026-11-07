@@ -1,53 +1,70 @@
 package miopackage;
 
 public class Prodotto {
+    // ATTRIBUTI
     private int codice;
     private String nome;
     private String marchio;
     private String genere;
-    private int pezzi;
+    private int numeroPezzi;
 
-    //COSTRUTTORE DI DEFAULT
-    public Prodotto() {
-        this.codice = 0;
-        this.nome = "";
-        this.marchio = "";
-        this.genere = "";
-        this.pezzi = 0;
+    //COSTRUTTORE DEFAULT
+    public Prodotto(){
+        codice = 0;
+        nome = "";
+        marchio = "";
+        genere = "";
+        numeroPezzi = 0;
     }
-
     //COSTRUTTORE PARAMETRICO
-    public Prodotto(int codice, String nome, String marchio, String genere, int pezzi) {
+    public Prodotto(int codice, String nome, String marchio, String genere, int numeroPezzi){
         this.codice = codice;
         this.nome = nome;
         this.marchio = marchio;
         this.genere = genere;
-        this.pezzi = pezzi;
+        this.numeroPezzi = numeroPezzi;
     }
 
-    //METODI GETTER
-    public int getCodice() {
+    // GETTER
+    int getCodice(){
         return codice;
     }
-    public String getNome() {
+    String getNome(){
         return nome;
     }
-    public String getMarchio() {
+    String getMarchio(){
         return marchio;
     }
-    public String getGenere() {
+    String getGenere(){
         return genere;
     }
-    public int getPezzi() {
-        return pezzi;
+    int getNumeroPezzi(){
+        return numeroPezzi;
     }
 
-    //METODI SETTER
-    public void setCodice(int codice) {
+    // SETTER
+    void setCodice(int codice){
         this.codice = codice;
     }
-    public void setNome(String nome) {
+    void setNome(String nome){
         this.nome = nome;
     }
+    void setMarchio(String marchio){
+        this.marchio = marchio;
+    }
+    void setGenere (String genere){
+        this.genere = genere;
+    }
+    void setNumeroPezzi(int numeroPezzi){
+        this.numeroPezzi = numeroPezzi;
+    }
 
+    // VISUALIZZA
+    void visualizza(){
+        System.out.println("Codice prodotto: "+codice);
+        System.out.println("Nome: "+nome);
+        System.out.println("Marchio: "+marchio);
+        System.out.println("Genere: "+genere);
+        System.out.println("Pezzi: "+numeroPezzi);
+    }
 }
